@@ -26,8 +26,24 @@ Gender
 Birth Year
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Udacity Introduction to Python Programming course notes and videos
+
+https://stackoverflow.com/questions/51603690/extract-day-and-month-from-a-datetime-object
+
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.month.html
+
+https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.weekday.html
+
+https://stackoverflow.com/questions/36341484/get-day-name-from-weekday-int
+
+https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.hour.html
+
+https://github.com/juliaobenauer/us-bikeshare-data-project/blob/master/bikeshare_2.py
+
+https://github.com/khaledimad/Explore-US-Bikeshare-Data/blob/master/bikeshare_2.py
 
