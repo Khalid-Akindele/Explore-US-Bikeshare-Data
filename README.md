@@ -16,38 +16,36 @@ In this project, I used data provided by Motivate, a bike share system provider 
 **The Datasets**
 
 All three of the data files contain the same core six (6) columns:
-
--Start Time (e.g., 2017-01-01 00:07:57)
--End Time (e.g., 2017-01-01 00:20:53)
--Trip Duration (in seconds - e.g., 776)
--Start Station (e.g., Broadway & Barry Ave)
--End Station (e.g., Sedgwick St & North Ave)
--User Type (Subscriber or Customer)
+- Start Time (e.g., 2017-01-01 00:07:57)
+- End Time (e.g., 2017-01-01 00:20:53)
+- Trip Duration (in seconds - e.g., 776)
+- Start Station (e.g., Broadway & Barry Ave)
+- End Station (e.g., Sedgwick St & North Ave)
+- User Type (Subscriber or Customer)
 
 The Chicago and New York City files also have the following two columns:
-
--Gender
--Birth Year
+- Gender
+- Birth Year
 
 ### Files used
--chicago.csv
--new_york_city.csv
--washington.csv
+- chicago.csv
+- new_york_city.csv
+- washington.csv
 
 ### Credits
--Udacity Introduction to Python Programming course notes and videos
+- Udacity Introduction to Python Programming course notes and videos
 
--https://stackoverflow.com/questions/51603690/extract-day-and-month-from-a-datetime-object
+- https://stackoverflow.com/questions/51603690/extract-day-and-month-from-a-datetime-object
 
--https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.month.html
+- https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.month.html
 
--https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.weekday.html
+- https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.weekday.html
 
--https://stackoverflow.com/questions/36341484/get-day-name-from-weekday-int
+- https://stackoverflow.com/questions/36341484/get-day-name-from-weekday-int
 
--https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.hour.html
+- https://pandas.pydata.org/docs/reference/api/pandas.Series.dt.hour.html
 
--https://github.com/juliaobenauer/us-bikeshare-data-project/blob/master/bikeshare_2.py
+- https://github.com/juliaobenauer/us-bikeshare-data-project/blob/master/bikeshare_2.py
 
--https://github.com/khaledimad/Explore-US-Bikeshare-Data/blob/master/bikeshare_2.py
+- https://github.com/khaledimad/Explore-US-Bikeshare-Data/blob/master/bikeshare_2.py
 
