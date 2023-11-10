@@ -7,6 +7,8 @@ CITY_DATA = {'chicago': 'chicago.csv',
              'new york city': 'new_york_city.csv',
              'washington': 'washington.csv'}
 
+MONTHS = ["all", "january", "february", "march", "april", "may", "june"]
+DAYS = ["all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
 def get_filters():
     """
@@ -18,36 +20,21 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    while True:
-        city = input("Please enter a city (Chicago, New York City, Washington): ").strip().lower()
+    # get user input for city (chicago, new york city, washington).
+    def get_valid_input(prompt, valid_options):
+        while True:
+            user_input = input(prompt).strip().lower()
+            if user_input in valid_options:
+                return user_input
+            else:
+                print(f"Invalid input. Please enter one of {valid_options}.")
 
-        if city in ["chicago", "new york city", "washington"]:
-            break
-        else:
-            print("Invalid input. Please enter one of the specified cities.")
+    city = get_valid_input("Please enter a city (Chicago, New York City, Washington): ", CITY_DATA.keys())
+    month = get_valid_input("Please select a month (all, january, february, ... june): ", MONTHS)
+    day = get_valid_input("Please select a day (all, monday, tuesday, ... sunday): ", DAYS)
 
-    # get user input for month (all, january, february, ... , june)
-    while True:
-        month = input("Please select a month (all, january, february, ... june): ").strip().lower()
-        
-        if month in ["all", "january", "february", "march", "april", "may", "june"]:
-            break
-        else:
-            print("Invalid input. Please enter a month between January and June, or all.")
-
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-    while True:
-        day = input("Please select a day (all, monday, tuesday, ... sunday): ").strip().lower()
-        
-        if day in ["all", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]:
-            break
-        else:
-            print("Invalid input. Please enter a day between Monday and Sunday, or all.")
-
-    print('-'*40)
+    print('-' * 40)
     return city, month, day
-
 
 def load_data(city, month, day):
     """
