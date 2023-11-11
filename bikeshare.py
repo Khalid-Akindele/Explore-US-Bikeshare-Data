@@ -75,6 +75,8 @@ def load_data(city, month, day):
         print("City data file not found.")
         return None
 
+def calculate_most_common(column):
+    return column.mode()[0]
 
 def time_stats(df, month, day, city):
     """Displays statistics on the most frequent times of travel."""
@@ -83,8 +85,7 @@ def time_stats(df, month, day, city):
     start_time = time.time()
 
     # display the most common month
-    list(cal.month_name)
-    common_month = df['Month'].mode()[0]
+    common_month = calculate_most_common(df['Month'])
     
     # to print name of the most common month
     if month != 'all':
@@ -95,7 +96,7 @@ def time_stats(df, month, day, city):
 
     # display the most common day of week
     list(cal.day_name)
-    common_day = df['Day_of_Week'].mode()[0]
+    common_day = calculate_most_common(df['Day_of_Week'])
     
     # to print name of the most common day of the week
     if day != 'all':
@@ -107,8 +108,8 @@ def time_stats(df, month, day, city):
 
     # display the most common start hour
     df['Start Hour'] = df['Start Time'].dt.hour
-    common_start_hour = df['Start Hour'].mode()
-    print(f"The most common start hour for travel for your selection is: {common_start_hour}", "o'clock.\n\n")
+    common_start_hour = calculate_most_common(df['Start Hour'])
+    print(f'The most common start hour for travel for your selection is: {common_start_hour} o\'clock.\n\n')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
